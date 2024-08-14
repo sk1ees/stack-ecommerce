@@ -26,12 +26,13 @@
         <div class="w-[75%] flex flex-col gap-5 h-screen">
             <div class="flex items-start flex-wrap gap-5">
                 <%products.forEach((product)=>{%>
-                    <div class="w-60 ">
-                        <div class=" w-full h-52">
-                            <img class="w-full h-full object-cover"
+                    <div class="w-60 shadow-2xl">
+                        <div class=" w-full h-52 ">
+                            <img class="w-full h-full object-cover rounded-t-lg"
                                 src="data:image/jpeg;base64,<%= product.image.toString('base64') %>" alt="">
                         </div>
-                        <div class="flex justify-between bg-red-300 items-center px-4 py-4 text-black">
+                        <div
+                            class="flex rounded-b-lg bg-[<%=product.panelcolor%>] text-[<%= product.textcolor %>] justify-between  items-center px-4 py-4 ">
                             <div>
                                 <h3>
                                     <%=product.name%>
